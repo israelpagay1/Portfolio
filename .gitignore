@@ -1,0 +1,9 @@
+# Ignored files
+
+target/
+*.log
+*.tmp
+.idea/
+.vscode/
+*.class
+
