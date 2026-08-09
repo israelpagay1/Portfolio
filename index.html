@@ -23,14 +23,7 @@
 
 <nav>
 
-<a class="brand" href="/">
-  <!-- Simple truck SVG (inline) -->
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
-    <title>Truck logo</title>
-    <path fill="currentColor" d="M3 6h11v7h-1a2 2 0 0 0-2 2 2 2 0 1 0 4 0h3a2 2 0 0 0 4 0V9l-4-3H14V6H3zm2 9a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-  </svg>
-  <span class="brand-text">Israel Pagay</span>
-</a>
+<h2>Israel Pagay</h2>
 
 <ul>
 <li><a href="#about">About</a></li>
@@ -446,20 +439,27 @@ Certificate of Appreciation
   <p><strong>WhatsApp:</strong> +63 921 303 8057</p>
 </div>
 
+<form id="contactForm" style="margin-top:1rem; max-width:600px;">
+  <label for="name">Name</label><br>
+  <input type="text" id="name" name="name" style="width:100%; padding:8px; margin-top:6px; margin-bottom:8px;">
+  <label for="email">Email</label><br>
+  <input type="email" id="email" name="email" style="width:100%; padding:8px; margin-top:6px; margin-bottom:8px;">
+  <label for="message">Message</label><br>
+  <textarea id="message" name="message" style="width:100%; padding:8px; margin-top:6px; margin-bottom:8px;" rows="4"></textarea>
+  <button type="submit" class="btn">Send</button>
+</form>
+
 <p class="hero-quote">
-"Success is built on teamwork and delivered through logistics."
+“Success is built on teamwork and delivered through logistics.”
 </p>
 
 </section>
-
 
 <footer>
   <p>© 2026 Israel Pagay</p>
 </footer>
 
-
 <script src="script.js"></script>
-
 
 </body>
 
