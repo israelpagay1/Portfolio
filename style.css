@@ -76,18 +76,42 @@ nav h2 {
   font-size: 1.35rem;
 }
 
-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
+/* Brand / logo in nav */
+nav .brand {
+  display: inline-flex;
   align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit; /* inherit white from nav */
+  -webkit-tap-highlight-color: transparent;
 }
 
-nav li {
-  margin: 0;
+nav .brand svg,
+nav .brand img {
+  width: 36px;
+  height: 36px;
+  display: block;
+  color: #93c5fd; /* tint for inline SVG fill via currentColor */
+  flex-shrink: 0;
+}
+
+nav .brand .brand-text {
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1;
+  color: #ffffff;
+}
+
+/* Slightly smaller on small screens */
+@media (max-width: 420px) {
+  nav .brand svg,
+  nav .brand img {
+    width: 28px;
+    height: 28px;
+  }
+  nav .brand .brand-text {
+    font-size: 1.05rem;
+  }
 }
 
 .hero {
