@@ -90,44 +90,6 @@ nav li {
   margin: 0;
 }
 
-/* Brand / logo in nav */
-nav .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-  color: inherit; /* inherit white from nav */
-  -webkit-tap-highlight-color: transparent;
-}
-
-nav .brand svg,
-nav .brand img {
-  width: 36px;
-  height: 36px;
-  display: block;
-  color: #93c5fd; /* tint for inline SVG fill via currentColor */
-  flex-shrink: 0;
-}
-
-nav .brand .brand-text {
-  font-weight: 700;
-  font-size: 1.15rem;
-  line-height: 1;
-  color: #ffffff;
-}
-
-/* Slightly smaller on small screens */
-@media (max-width: 420px) {
-  nav .brand svg,
-  nav .brand img {
-    width: 28px;
-    height: 28px;
-  }
-  nav .brand .brand-text {
-    font-size: 1.05rem;
-  }
-}
-
 .hero {
   display: grid;
   grid-template-columns: minmax(200px, 340px) 1fr;
@@ -291,6 +253,7 @@ section li {
   margin-top: 1.5rem;
 }
 
+/* make card content consistently start at the same vertical position */
 .cards > div,
 .experience-card {
   background: rgba(10, 19, 47, 0.96);
@@ -300,7 +263,7 @@ section li {
   min-height: 210px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start; /* ensure content aligns to top */
   gap: 1rem;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.24);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -308,6 +271,21 @@ section li {
 
 .cards > div {
   border-top: 4px solid rgba(37, 99, 235, 0.75);
+}
+
+/* heading and list spacing made explicit so all cards match */
+.cards > div h3 {
+  margin: 0 0 0.75rem 0; /* consistent spacing under the title */
+  font-size: 1.25rem;
+}
+
+.cards > div ul {
+  margin: 0; /* remove unexpected top margins */
+  padding-left: 1.25rem; /* keep bullet indent */
+}
+
+.cards > div ul li {
+  margin-bottom: 0.65rem;
 }
 
 .experience-card {
